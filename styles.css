@@ -126,6 +126,12 @@ header {
     padding-right: 50px;
 }
 
+.store {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .item {
     position: relative;
     background-size: cover;
@@ -195,7 +201,7 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 #fire {
