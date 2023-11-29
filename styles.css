@@ -1,0 +1,221 @@
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #1F1F1F;
+    color: #FFF4DD;
+}
+
+#marquee {
+    height:35px;
+    width:100%;
+    background-color: #1F1F1F;
+    background-size: auto 35px;
+    background-image: url(images/marquee.svg);
+    background-repeat: repeat-x;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    animation: scrollMarquee 20s linear infinite; 
+}
+
+@keyframes scrollMarquee {
+    from {
+        background-position: 0px 0;
+    }
+    to {
+        background-position: -937px 0; 
+    }
+}
+
+#fade {
+    width:100%;
+    height:40px;
+    background-image: url(images/fade.svg);
+    position: fixed;
+    top: 35px;
+    z-index: 90;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+header {
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+
+.rbow {
+    height:25px;
+    width: 100%;
+    background-image: url(images/rbow.svg);
+    animation: 0.5s ease-out 0s 1 slideInFromLeft;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#logo {
+   width:100%;
+   max-width: 250px;
+   min-width: 250px;
+   margin-top: 10px;
+   padding-left: 20px;
+   padding-right: 20px;
+   animation: 0.5s ease-out 0s 1 slideInFromLeft;
+}
+
+#nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 70px;
+    gap: 40px;
+}
+
+#mail {
+    background-image: url(images/mail.svg);
+    height:50px;
+    width: 50px;
+    animation: 0.5s ease-out 0s 1 slideInFromLeft;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#shop {
+    background-image: url(images/shirt.svg);
+    height:50px;
+    width: 50px;
+    animation: 0.5s ease-out 0s 1 slideInFromLeft;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#insta {
+    background-image: url(images/insta.svg);
+    height:50px;
+    width: 50px;
+    animation: 0.5s ease-out 0s 1 slideInFromLeft;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.item {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding-top: 100%; /* Maintains the aspect ratio */
+    animation: 0.5s ease-out 0s 1 slideInFromLeft;
+}
+
+.item1 {
+    background-image: url('images/portfolio/kick.svg');
+}
+
+.item2 {
+    background-image: url('images/portfolio/kapps.svg');
+}
+
+.item3 {
+    background-image: url('images/portfolio/cortex.svg');
+}
+
+.item4 {
+    background-image: url('images/portfolio/shroom.svg');
+}
+
+.item5 {
+    background-image: url('images/portfolio/suban.svg');
+}
+
+.item6 {
+    background-image: url('images/portfolio/djpat.svg');
+}
+
+.item7 {
+    background-image: url('images/portfolio/vinylspin.svg');
+}
+
+.item8 {
+    background-image: url('images/portfolio/flag.svg');
+}
+
+.item9 {
+    background-image: url('images/portfolio/gunflower.svg');
+}
+
+.item10 {
+    background-image: url('images/portfolio/gunfingers.svg');
+}
+
+
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+footer {
+    width:100%;
+    height:400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+#fire {
+    background-image: url(images/fire.svg);
+    width:50px;
+    height:50px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* mobile */
+@media (max-width: 800px) { 
+    .grid {
+        grid-template-columns: 1fr;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .overlay {
+        font-size: clamp(1rem, 4vw, 4rem);
+    }
+
+}
