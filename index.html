@@ -63,5 +63,24 @@
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 
+    <script>
+        function reloadSVGBackgroundImages() {
+    const elementsWithSVGBackground = document.querySelectorAll('.item'); 
+
+    elementsWithSVGBackground.forEach(element => {
+        let style = window.getComputedStyle(element);
+        let backgroundImage = style.getPropertyValue('background-image');
+
+
+        backgroundImage = backgroundImage.replace(/(\.svg)(\?reload=\d+)?/, `$1?reload=${new Date().getTime()}`);
+        element.style.backgroundImage = backgroundImage;
+    });
+}
+
+
+window.addEventListener('load', reloadSVGBackgroundImages);
+
+    </script>
+
 </body>
 </html>
