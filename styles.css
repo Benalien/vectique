@@ -149,11 +149,11 @@ header {
 }
 
 .item3 {
-    background-image: url('images/portfolio/cortex.svg');
+    background-image: url('images/portfolio/oknf.svg');
 }
 
 .item4 {
-    background-image: url('images/portfolio/shroom.svg');
+    background-image: url('images/portfolio/cortex.svg');
 }
 
 .item5 {
@@ -161,25 +161,8 @@ header {
 }
 
 .item6 {
-    background-image: url('images/portfolio/djpat.svg');
-}
-
-.item7 {
-    background-image: url('images/portfolio/vinylspin.svg');
-}
-
-.item8 {
-    background-image: url('images/portfolio/oknf.svg');
-}
-
-.item9 {
     background-image: url('images/portfolio/gunflower.svg');
 }
-
-.item10 {
-    background-image: url('images/portfolio/gunfingers.svg');
-}
-
 
 
 @keyframes slideInFromLeft {
